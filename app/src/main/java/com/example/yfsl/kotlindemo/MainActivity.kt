@@ -20,6 +20,21 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         compare()
         stringLastIndexOf()
         stringRemoveChr()
+        stringIsNull()
+        nullSafeSwitch()
+    }
+
+    private fun stringIsNull() {
+        val str: String? = null
+        val lenght = str?.length
+        println(lenght)
+        println(str?.toInt()?:-1)
+    }
+
+    private fun nullSafeSwitch(){
+        val a: Any = "hello"
+        val bInt: Int? = a as? Int
+        println(bInt)
     }
 
     fun compare(){
